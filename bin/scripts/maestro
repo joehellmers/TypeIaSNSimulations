@@ -1,0 +1,11 @@
+MAESTRO_LATEST=22.01
+if [ -z $1 ]
+then
+	echo "No MAESTROeX version supplied, using version: $MAESTRO_LATEST"
+	MAESTRO_VER="$MAESTRO_LATEST"
+else
+	MAESTRO_VER="$1"
+	echo "Using MAESTROeX version supplied: $MAESTRO_VER"
+fi
+
+export MAESTRO_HOME=/shared/apps/maestro/maestro-$MAESTRO_VER/MAESTROeX

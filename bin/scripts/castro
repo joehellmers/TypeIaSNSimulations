@@ -1,0 +1,11 @@
+CASTRO_LATEST=22.01
+if [ -z $1 ]
+then
+	echo "No Castro version supplied, using version: $CASTRO_LATEST"
+	CASTRO_VER="$CASTRO_LATEST"
+else
+	CASTRO_VER="$1"
+	echo "Using Castro version supplied: $CASTRO_VER"
+fi
+
+export CASTRO_HOME=/shared/apps/castro/castro-$CASTRO_VER/Castro
